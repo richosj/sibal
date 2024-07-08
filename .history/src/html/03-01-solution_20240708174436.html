@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "솔루션",
+            "title" : "Mapprime 솔루션"
+        })
+        @@include('./include/headerBanner.html')
+        @@include('./include/mobilenav.html')
+        <!-- s: contents -->
+        <div data-current="business" data-layout="sub" id="contents" class="solution">
+            @@include('./include/intro.html',{
+                "sub_title_desc" : "데이터 생산부터 서비스 전 단계를 아우르는 솔루션<br>MapPrime은 디지털트윈, AI 시대에서 최고의 선택입니다."
+            })
+            <div class="solution__wrap">
+                <div class="container">
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">Mapprime v2.0_<span>MapPrime GIS Web Server</span></div>
+                            <div class="business__hgroup--desc">
+                                <ul class="list__circle">
+                                    <li>공간정보를 이미지(jpg,png) 및 텍스트(xml, json)로 변환하여 제공하는 서비스 엔진</li>
+                                    <li>다양한 OS 지원(UNIX,Windows,Linux)</li>
+                                    <li>OGC 국제 표준 서버, UI 기반 스타일 생성 및 타일생성 도구 제공</li>
+                                </ul>
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>주요 적용 시스템</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs _multi">
+                            <div class="figure">
+                                <img src="" data-src="solution-01.png">
+                                <div class="caption">전국 종합병원 도착시간 분석</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="solution-02.png">
+                                <div class="caption">침수흔적 시각화</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="solution-03.png">
+                                <div class="caption">지적도/연속도 생성관리</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="solution-04.png">
+                                <div class="caption">해수욕장 안전 지도</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">Mapprime v2.0_<span>MapPrime GIS Server & Desktop</span></div>
+                            <div class="business__hgroup--desc">
+                                <ul class="list__circle">
+                                    <li>공간정보를 이미지(jpg,png) 및 텍스트(xml, json)로 변환하여 제공하는 서비스 엔진</li>
+                                    <li>다양한 OS 지원(UNIX,Windows,Linux)</li>
+                                    <li>OGC 국제 표준 서버, UI 기반 스타일 생성 및 타일생성 도구 제공</li>
+                                </ul>
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>주요 적용 시스템</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs _multi">
+                            <div class="figure grid-full">
+                                <img src="" data-src="solution-05.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">Mapprime <span>CLOUD</span></div>
+                            <div class="business__hgroup--desc">
+                                <ul class="list__circle">
+                                    <li>2D/3D 공간정보를 융합한 Globe기반 디지털트윈 SaaS</li>
+                                    <li>클라우드형 디지털트윈 콘텐츠 제작, 분석, 공유, 배포 서비스 제공</li>
+                                </ul>
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>주요 적용 시스템</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs solution__cloud">
+                            <div class="figure">
+                                <img src="" data-src="solution-06.png">
+                            </div>
+                            <div class="figure bd_0">
+                                <div class="figure">
+                                    <img src="" data-src="solution-07.png">
+                                    <div class="caption">측정 및 분석</div>
+                                </div>
+                                <div class="figure">
+                                    <img src="" data-src="solution-08.png">
+                                    <div class="caption">3D 모델 배치</div>
+                                </div>
+                                <div class="figure">
+                                    <img src="" data-src="solution-09.png">
+                                    <div class="caption">시뮬레이션</div>
+                                </div>
+                                <div class="figure">
+                                    <img src="" data-src="solution-10.png">
+                                    <div class="caption">스토리맵</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">Mapprime <span>ENC</span></div>
+                            <div class="business__hgroup--desc">
+                                <ul class="list__circle">
+                                    <li>IHO 범용 수로 표준 데이터 관리 서비스</li>
+                                    <li>S-101 전자 해도(Electronic Navigational Charts) 제품 편집 기능 제공</li>
+                                    <li>포인트, 멀티포인트, 커브, 서페이스 등의 해양 표준 공간 데이터 관리 지원</li>
+                                </ul>
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>주요 적용 시스템</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs _multi">
+                            <div class="figure grid-full">
+                                <img src="" data-src="solution-11.png">
+                                <div class="caption">S-101 전자해도 제품</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="solution-12.png">
+                                <div class="caption">S-102 해저면 제품</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="solution-13.png">
+                                <div class="caption">S-127 해상교통</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">Mapprime <span>for KRAS v1.0</span></div>
+                            <div class="business__hgroup--desc">
+                                <ul class="list__circle">
+                                    <li>ㆍ외산 GIS 솔루션을 국산 MapPrime솔루션으로 전환</li>
+                                    <li>ㆍ국산 SW산업 육성 및 지원을 위한 공간정보 SW 품질성능평가 충족</li>
+                                    <li>ㆍ전국 160여개 지자체 부동산종합공부시스템 적용</li>
+                                    <li>ㆍ지적관리, 용도지역지구, 측량성과, 공간정보 취합체계 공간정보 활용 기능에 적용</li>
+                                </ul>
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>주요 적용 시스템</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs _multi">
+                            <div class="figure grid-full"><img src="" data-src="solution-14.png"></div>
+                        </div>
+                    </div>
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">Mapprime <span>3D GIS</span></div>
+                            <div class="business__hgroup--desc">
+                                <ul class="list__circle">
+                                    <li>웹 및 게임엔진 기반 Seamless 실내외 공간정보 연계 처리 및 가시화</li>
+                                    <li>대용량 에셋(건설데이터(BIM), 3D 모델, 지형(Terrain), 정사영상) 타일링 및 경량화</li>
+                                    <li>3D 디지털트윈 콘텐츠 제작 및 배포 · 공유 서비스 제공</li>
+                                    <li>3차원 기반 분석 및 시뮬레이션 기능 제공</li>
+                                </ul>
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>주요 적용 시스템</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs column-3">
+                            <div class="figure">
+                                <img src="" data-src="solution-15.png">
+                                <div class="caption">3D Builder</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="solution-16.png">
+                                <div class="caption">3D Manager</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="solution-17.png">
+                                <div class="caption">3D Studio</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">Mapprime <span>DSM Recon</span></div>
+                            <div class="business__hgroup--desc">
+                                <ul class="list__circle">
+                                    <li>웹 및 게임엔진 기반 Seamless 실내외 공간정보 연계 처리 및 가시화</li>
+                                    <li>대용량 에셋(건설데이터(BIM), 3D 모델, 지형(Terrain), 정사영상) 타일링 및 경량화</li>
+                                    <li>3D 디지털트윈 콘텐츠 제작 및 배포 · 공유 서비스 제공</li>
+                                    <li>3차원 기반 분석 및 시뮬레이션 기능 제공</li>
+                                </ul>
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>주요 적용 시스템</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs column-3">
+                            <div class="figure">
+                                <img src="" data-src="solution-15.png">
+                                <div class="caption">3D Builder</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="solution-16.png">
+                                <div class="caption">3D Manager</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="solution-17.png">
+                                <div class="caption">3D Studio</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+    @@include('./include/modal.html',{
+        'page__name' : 'solution'
+    })
+</body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "솔루션",
+            "title" : "Mapprime 솔루션"
+        })
+        @@include('./include/headerBanner.html')
+        @@include('./include/mobilenav.html')
+        <!-- s: contents -->
+        <div data-current="business" data-layout="sub" id="contents" class="solution">
+            @@include('./include/intro.html',{
+                "sub_title_desc" : "데이터 생산부터 서비스 전 단계를 아우르는 솔루션<br>MapPrime은 디지털트윈, AI 시대에서 최고의 선택입니다."
+            })
+            <div class="solution__wrap">
+                <div class="container">
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">MapPrime 3D City <small>_ 도시 계획·관리</small></div>
+                            <div class="business__hgroup--desc">
+                                도시의 개발 · 정비 · 보전을 위해 토지이용, 환경, 경관 등 다양한 분야에 특화된 의사 결정 지원 도구를 제공하며<br>
+                                3D 기반의 조회· 분석 기능을 통해 행정 정보를 입체적으로 표출하여 도시 운영 업무의 효율성을 극대화합니다.
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>고객사 / 사업</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+</body></html>
