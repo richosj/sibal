@@ -55,45 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
-  // 모든 버튼 요소를 선택합니다.
-  var buttons = document.querySelectorAll('button[data-trigger="modal"]');
-
-  // 모달 열기 함수
-  var openModal = function openModal(modal) {
-    modal.style.display = 'block';
-  };
-
-  // 모달 닫기 함수
-  var closeModal = function closeModal(modal) {
-    modal.style.display = 'none';
-  };
-
-  // 버튼 클릭 이벤트 리스너를 추가합니다.
-  buttons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      var target = button.getAttribute('data-target');
-      var modal = document.querySelector(target);
-      if (modal) {
-        openModal(modal);
-
-        // 모달 닫기 버튼 이벤트 리스너를 추가합니다.
-        var closeButton = modal.querySelector('.close');
-        if (closeButton) {
-          closeButton.addEventListener('click', function () {
-            return closeModal(modal);
-          });
-        }
-
-        // 모달 외부 클릭 시 닫기 이벤트 리스너를 추가합니다.
-        window.addEventListener('click', function (event) {
-          if (event.target === modal) {
-            closeModal(modal);
-          }
-        });
-      }
-    });
-  });
 });
 "use strict";
 
@@ -786,6 +747,45 @@ window.addEventListener('resize', function () {
   }, 250); // 250밀리초 후에 refresh() 호출
 });
 "use strict";
+
+// 모든 버튼 요소를 선택합니다.
+var buttons = document.querySelectorAll('button[data-trigger="modal"]');
+
+// 모달 열기 함수
+var openModal = function openModal(modal) {
+  modal.style.display = 'block';
+};
+
+// 모달 닫기 함수
+var closeModal = function closeModal(modal) {
+  modal.style.display = 'none';
+};
+
+// 버튼 클릭 이벤트 리스너를 추가합니다.
+buttons.forEach(function (button) {
+  button.addEventListener('click', function () {
+    var target = button.getAttribute('data-target');
+    var modal = document.querySelector(target);
+    if (modal) {
+      openModal(modal);
+
+      // 모달 닫기 버튼 이벤트 리스너를 추가합니다.
+      var closeButton = modal.querySelector('.close');
+      if (closeButton) {
+        closeButton.addEventListener('click', function () {
+          return closeModal(modal);
+        });
+      }
+
+      // 모달 외부 클릭 시 닫기 이벤트 리스너를 추가합니다.
+      window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+          closeModal(modal);
+        }
+      });
+    }
+  });
+});
 "use strict";
 
 /*
