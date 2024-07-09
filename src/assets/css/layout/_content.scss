@@ -6,6 +6,10 @@
     padding-top: 23rem;
     padding-bottom: 23rem;
     display: block;
+    @include responsive(xl){
+        padding-top: 18rem;
+        padding-bottom: 18rem;
+    }
     @include responsive(lg){
         padding-top: 15rem;
         padding-bottom: 13rem;
@@ -36,6 +40,9 @@ body{
 .intro--banner{
     position: relative;
     margin-bottom: 15rem;
+    @include responsive(xl){
+        display: none;
+    }
     &_point{
         //margin-top: 15rem;
         padding-top: 24rem;
@@ -65,6 +72,14 @@ body{
             color: #000;
             font-weight: 700;
             font-size: 4.8rem;
+        }
+        @include responsive(lg){
+            h2{
+                font-size: clamp(1.6rem, 2.4vw, 2rem);
+            }
+            p{
+                font-size: clamp(2rem, 4.8vw, 4rem);
+            }
         }
     }
     &-wrap{

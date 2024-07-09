@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    if(!document.querySelector('.main')) return;
     function section01() {
         // ScrollTrigger 인스턴스 제거
         const existingTrigger = ScrollTrigger.getById('st-story-visual-motion');

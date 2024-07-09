@@ -99,6 +99,15 @@
 .board{
     &--paging{
         padding-top: 16rem;
+        @include responsive(xl){
+            padding-top: 12rem;
+        }
+        @include responsive(lg){
+            padding-top: 10rem;
+        }
+        @include responsive(md){
+            padding-top: 7rem;
+        }
     }
     &--search{
         background-color: #f8f8f8;
@@ -107,11 +116,18 @@
         justify-content: center;
         padding: 2rem 0;
         margin-bottom: 6rem;
+        @include responsive(lg){
+            margin-bottom: 4rem;
+        }
+        form{
+            width: 100%;
+        }
         &__wrap{
             width: 68rem;
             position: relative;
             display: flex;
             align-items: center;
+            margin: 0 auto;
             label{
                 font-size: 1.9rem;
                 color: #2d2d2d;
@@ -124,6 +140,7 @@
                 width: calc(100% - 7rem);
                 height: 6rem;
                 padding-left: 2rem;
+                padding-right: 6rem;
             }
             button{
                 position: absolute;
@@ -140,6 +157,28 @@
                     @include set-background('../images/board/icon-search.png');
                 }
             }
+            @include responsive(lg){
+                //width: min(100%, 80rem);w
+                width: min(100% , 80vw);
+                label{
+                    font-size: 1.3rem;
+                    width: 5rem;
+                }
+                input[type="text"]{
+                    width: calc(100% - 5rem);
+                    height: 4.2rem;
+                    font-size: 1.4rem;
+                    padding-right: 4rem;
+                }
+                button{
+                    width: 4rem;
+                    i{
+                        width: 2rem;
+                        height: 2rem;
+                        background-size: 100% auto;
+                    }
+                }
+            }
         }
     }
     &--total{
@@ -150,11 +189,34 @@
         b{
             color: #0a529d;
         }
+        @include responsive(xl){
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        @include responsive(lg){
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        @include responsive(md){
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
     }
     &--gall{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 6rem 3rem;
+        @include responsive(xl){
+            gap: 4rem 2.5rem;
+        }
+        @include responsive(lg){
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem 2rem;
+        }
+        @include responsive(sm){
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
         &__item{
             > a{
                 display: block;
@@ -177,6 +239,9 @@
         }
         &__info{
             padding-top: 2.7rem;
+            @include responsive(lg){
+                padding-top: 2rem;
+            }
         }
         &__title{
             font-weight: 700;
@@ -189,6 +254,14 @@
             line-height: 1.5; // 각 줄의 높이 설정
             height: 7.8rem;
             font-size: 2.5rem;
+            @include responsive(xl){
+                font-size: 2rem;
+                height: 6rem;
+            }
+            @include responsive(lg){
+                font-size: clamp(1.2rem,2.5vw,1.8rem);
+                height: 4rem;
+            }
         }
         &__desc{
             color: #2d2d2d;
@@ -201,15 +274,42 @@
             height: 5.7rem;
             font-size: 1.9rem;
             margin-top: 2rem;
+            @include responsive(xl){
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+                height: 5.5rem;
+            }
+            @include responsive(lg){
+                font-size: 1.3rem;
+                margin-top: 1.2rem;
+                height: 3.5rem;
+            }
         }
         &__date{
             margin-top: 1.5rem;
             color: #555555;
             font-size: 1.5rem;
+            @include responsive(xl){
+                font-size: 1.2rem;
+                margin-top: 1.2rem;
+            }
+            @include responsive(lg){
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
         }
     }
     &--tabs{
         margin-bottom: 6rem;
+        @include responsive(xl){
+            margin-bottom: 5rem;
+        }
+        @include responsive(lg){
+            margin-bottom: 4rem;
+        }
+        @include responsive(md){
+            margin-bottom: 3rem;
+        }
     }
 }
 
@@ -228,8 +328,7 @@
     }
     &__title{
         font-weight: 700;
-        color: #000;
-        
+        color: #000;        
         line-height: 1.2;
         font-size: 4.8rem;
     }
