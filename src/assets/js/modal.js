@@ -1,3 +1,17 @@
+
+const alignces = document.querySelector('.special-links a');
+const aligncesClose = document.querySelector('.alliance--close');
+
+alignces.addEventListener('click', () => {
+    const allianceModal = document.querySelector('.alliance');
+    allianceModal.classList.add('active')
+});
+aligncesClose.addEventListener('click', () => {
+    const allianceModal = document.querySelector('.alliance');
+    allianceModal.classList.remove('active')
+});
+
+
 // 모든 버튼 요소를 선택합니다.
 const buttons = document.querySelectorAll('button[data-trigger="modal"]');
 

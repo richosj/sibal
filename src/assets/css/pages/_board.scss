@@ -315,7 +315,7 @@
 
 
 .board--view{
-    @include set-background('../images/board/bg-view-top.png' , "auto" , right top);
+    @include set-background('../images/board/bg-view-top.png' , auto , right top);
     &__top{
         display: flex;
         align-items: center;
@@ -325,24 +325,57 @@
         padding: 6.5rem 0 6rem;
         text-align: center;
         border-bottom: 2px solid #000;
+        @include responsive(xl){
+            height: 25rem;
+            padding: 5rem 0 4rem;
+        }
+        @include responsive(lg){
+            border-bottom-width: 1px;
+            height: 20rem;
+            padding: 4rem 0 3rem;
+        }
+        @include responsive(md){
+            height: 14rem;
+            padding: 3rem 0 2.5rem;
+        }
     }
     &__title{
         font-weight: 700;
         color: #000;        
         line-height: 1.2;
         font-size: 4.8rem;
+        @include responsive(xl){
+            font-size: clamp(1.7rem, 3.33vw, 4rem);
+        }
     }
     &__date{
         color: #717171;
         font-size: 1.7rem;
+        @include responsive(xl){
+            font-size: clamp(1.2rem, 1.4vw, 1.5rem);
+        }
     }
     &__content{
         color: #555555;
         line-height: 1.7;
         padding: 10rem 0;
-        white-space: pre-wrap;
         p{
             font-size: 1.9rem;
+            @include responsive(xl){
+                font-size: clamp(1.4rem, 1.7vw, 1.7rem);
+            }
+            @include responsive(lg){
+                font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+            }
+        }
+        @include responsive(xl){
+            padding: 8rem 0;
+        }
+        @include responsive(lg){
+            padding: 7rem 0;
+        }
+        @include responsive(md){
+            padding: 5rem 0;
         }
     }
     &__files{
@@ -363,9 +396,30 @@
                 }
             }
         }
+        @include responsive(xl){
+            padding: 1.5rem 2rem;
+            a{
+                font-size: 1.3rem;
+            }
+        }
+        @include responsive(lg){
+            padding: 1.2rem 1.5rem;
+            a{
+                font-size: 1.2rem;
+            }
+        }
     }
     &__navigation{
         margin-top: 10rem;
+        @include responsive(xl){
+            margin-top: 8rem;
+        }
+        @include responsive(lg){
+            margin-top: 6rem;
+        }
+        @include responsive(md){
+            margin-top: 5rem;
+        }
         .item{
             display: block;
             border-top: 1px solid #ddd;
@@ -380,10 +434,26 @@
                 width: 100%;
                 border-radius: 0.5rem;
                 padding: 4rem 0;
+                @include responsive(xl){
+                    padding: 3rem 0;
+                    grid-template-columns: 15rem auto 15rem;
+                }
+                @include responsive(lg){
+                    grid-template-columns: 10rem auto 10rem;
+                }
+                @include responsive(md){
+                    grid-template-columns: 5rem auto 7rem;
+                }
                 .cate{
                     text-align: center;
                     color: #555555;
                     font-size: 1.5rem;
+                    @include responsive(xl){
+                        font-size: 1.3rem;
+                    }
+                    @include responsive(md){
+                        font-size: 1.2rem;
+                    }
                 }
                 .subject{
                     white-space: nowrap;
@@ -391,11 +461,26 @@
                     text-overflow: ellipsis;
                     color: #2d2d2d;
                     font-size: 2.5rem;
+                    @include responsive(xl){
+                        font-size: 2rem;
+                    }
+                    @include responsive(lg){
+                        font-size: 1.8rem;
+                    }
+                    @include responsive(md){
+                        font-size: 1.4rem;
+                    }
                 }
                 .date{
                     text-align: center;
                     color: #555555;
                     font-size: 1.5rem;
+                    @include responsive(xl){
+                        font-size: 1.3rem;
+                    }
+                    @include responsive(md){
+                        font-size: 1.2rem;
+                    }
                 }
             }
         }
@@ -404,6 +489,15 @@
         display: flex;
         justify-content: center;
         padding-top: 6rem;
+        @include responsive(xl){
+            padding-top: 5rem;
+        }
+        @include responsive(lg){
+            padding-top: 4rem;
+        }
+        @include responsive(md){
+            padding-top: 3rem;
+        }
         a{
             display: flex;
             align-items: center;
@@ -414,6 +508,18 @@
             background-color: #0a529d;
             color: #fff;
             font-size: 1.9rem;
+            @include responsive(xl){
+                height: 5rem;
+                font-size: 1.7rem;
+            }
+            @include responsive(lg){
+                height: 4.5rem;
+                font-size: 1.5rem;
+                max-width: calc(100% - 10vw);
+            }
+            @include responsive(md){
+                font-size: 1.3rem;
+            }
         }
     }
     &:not(&:has(.board--view__files)){

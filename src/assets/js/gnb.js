@@ -220,6 +220,8 @@ function updateMobileMenu(){
   const gnbLiElements = document.querySelectorAll('#gnb .gnb--li1');
   const firstListUl = document.querySelector('ul.first-list');
 
+  
+  if(firstListUl == null) return;
   gnbLiElements.forEach(gnbLi => {
     const firstATag = gnbLi.querySelector('a'); // 첫 번째 a 태그 선택
     if (firstATag) {
@@ -301,3 +303,16 @@ const init = () => {
   });
 };
 document.addEventListener("DOMContentLoaded", init);
+
+document.addEventListener("DOMContentLoaded", function() {
+  // 현재 주소가 특정 URL인지 확인
+  if (window.location.href === "https://all4land.com/outsider/" || window.location.href === "https://all4land.com/outsider") {
+    // #header 안에 있는 모든 a 태그 선택
+    var links = document.querySelectorAll("#header a");
+
+    // 각 a 태그의 href 속성을 빈 문자열로 설정
+    links.forEach(function(link) {
+      link.removeAttribute("href");
+    });
+  }
+});

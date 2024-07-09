@@ -20,6 +20,7 @@ const sassCompiler = gulpSass(sass);
 const server = browserSync.create();
 
 const paths = {
+  includeHtml: 'src/html/include/**/*.html',
   html: 'src/html/**/*.html',
   scss: 'src/assets/css',
   js: 'src/assets/js/**/*.js',
@@ -42,7 +43,7 @@ function clean() {
 
 // HTML task
 function html() {
-  return gulp.src(paths.html)
+  return gulp.src([paths.html, `!${paths.includeHtml}`])
     .pipe(plumber())
     .pipe(fileInclude({ 
       prefix: '@@', 
@@ -101,9 +102,16 @@ function minifyCssReset() {
     .pipe(gulp.dest(paths.distCss));
 }
 
+
+const separateFiles = [
+  'src/assets/js/main.js'  
+];
 // JavaScript task
 function scripts() {
-  return gulp.src([paths.js, `!${paths.vendorJs}`])
+  return gulp.src([paths.js, 
+    `!${paths.vendorJs}`,
+    ...separateFiles.map(file => `!${file}`)
+  ])
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(babel())
@@ -115,6 +123,26 @@ function scripts() {
     .pipe(gulp.dest(paths.distJs))
     .pipe(server.stream());
 }
+
+// 별도 파일 처리 작업 생성
+function createSeparateTasks() {
+  return separateFiles.map(file => {
+    const taskName = `script-${file.split('/').pop().replace('.js', '')}`;
+    gulp.task(taskName, () => {
+      return gulp.src(file)
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(babel())
+        .pipe(rename(file.split('/').pop()))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(paths.distJs))
+        .pipe(server.stream());
+    });
+    return taskName;
+  });
+}
+
 
 // Vendor JavaScript task
 function vendors() {
@@ -148,7 +176,7 @@ function serve(done) {
 const initialBuild = gulp.series(cssReset, minifyCssReset);
 
 // Build task
-const build = gulp.series(clean, initialBuild, gulp.parallel(html, gulp.series(styles, minifyStyles), vendors, scripts, images));
+const build = gulp.series(clean, initialBuild, gulp.parallel(html, gulp.series(styles, minifyStyles), vendors, scripts, gulp.parallel(createSeparateTasks()),images));
 
 // Default task
 export default gulp.series(build, serve);
