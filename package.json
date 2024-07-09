@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "gulp --gulpfile gulpfile.mjs"
+    "start": "gulp --gulpfile gulpfile.mjs",
+    "clean": "gulp clean"
   },
   "author": "",
   "license": "ISC",

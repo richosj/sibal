@@ -180,3 +180,6 @@ const build = gulp.series(clean, initialBuild, gulp.parallel(html, gulp.series(s
 
 // Default task
 export default gulp.series(build, serve);
+
+
+export { clean };
