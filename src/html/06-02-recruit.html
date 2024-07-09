@@ -19,10 +19,62 @@
         <!-- s: contents -->
         <div data-current="recruit" data-layout="sub" id="contents" class="recruit">
             @@include('./include/intro.html',{
-                "sub_title_desc" : "가치를 창출하는 정보 생산과 <br>혁신을 공유하는 서비스 제공합니다."
+                "sub_title_desc" : "탄력적 상시채용 제도 운용을 통해 <br>꿈과 열정이 있는 인재를 기다립니다."
             })
             <div class="recruit__wrap">
-
+      
+                <div class="board board--list container">
+                    <div class="board--search">
+                        <form id="fn">
+                            <div class="board--search__wrap">
+                                <label for="keyword">검색어</label>
+                                <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력" id="keyword">
+                                <button type="button" class="btn--search" title="검색"><i></i></button>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <nav class="board--tabs tabs" role="tablist">
+                        <div role="presentation">
+                            <a href="#" role="tab" aria-selected="true"><span>전체</span><small>(16)</small></a>
+                        </div>
+                        <div role="presentation">
+                            <a href="#" role="tab" aria-selected="false"><span>정기</span><small>(16)</small></a>
+                        </div>
+                        <div role="presentation">
+                            <a href="#" role="tab" aria-selected="false"><span>상시</span><small>(16)</small></a>
+                        </div>
+                    </nav>
+                    
+                    <div class="board--gall">
+                        <div class="board--gall__item">
+                            <a href="./06-02-recruit-view.html">
+                                <div class="recruit--gall__inner">
+                                    <div class="recruit--gall__progress"><span class="ing">진행중</span></div>
+                                    <div class="recruit--gall__ti">채용연계형 인턴 채용</div>
+                                    <div class="recruit--gall__data">2024년 6월 1일 ~ 2024년 6월 25일</div>
+                                </div>
+                            </a>
+                        </div>
+                        @@for (var i = 0; i < 5; i++) {
+                            <div class="board--gall__item">
+                                <a href="./06-02-recruit-view.html">
+                                    <div class="recruit--gall__inner">
+                                        <div class="recruit--gall__progress"><span>마감</span></div>
+                                        <div class="recruit--gall__ti">DB 직군 경력직 채용</div>
+                                        <div class="recruit--gall__data">상시</div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                    <!-- e: board-gall -->
+    
+                    <!-- s: paging -->
+                    @@include('./include/paging.html')
+                    <!-- e: paging -->
+                
+                <!-- e: board -->
             </div>
         </div>
         <!-- e: contents -->

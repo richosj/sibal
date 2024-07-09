@@ -1,2 +1,102 @@
 @import '../utils/var';
 @import '../utils/function';
+
+.recruit{
+	&--gall{
+		&__inner{
+			position: relative;
+			padding: 3.2rem;
+			border: 1px solid #c6c6c6;
+			border-radius: 2rem;
+			height: 24.7rem;
+			max-height: 24.7rem;
+		}
+		&__progress{
+			margin-bottom: 2.4rem;
+			span{
+				display: inline-block;
+				padding: 0.9rem 2.3rem;
+				color:#717171;
+				border: 1px solid #c6c6c6;
+				background: #f1f1f1;
+				border-radius:1.6rem;
+				font-size: 1.5rem;
+				&.ing{
+					border: 1px solid #007ab4;
+					color:#007ab4;
+					background: #cce4f0;
+				}
+			}
+		}
+		&__ti{
+			font-weight: bold;
+			font-size: 2.5rem;
+			color: #2d2d2d;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			line-height: 1.5;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		&__data{
+			position: absolute;
+			left: 3.2rem;
+			bottom: 3.2rem;
+		}
+	}
+}
+
+.recruit__wrap{
+	.recruit--view{
+		&__top{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 30rem;
+			padding: 6.5rem 0 6rem;
+			text-align: center;
+			border-bottom: 2px solid #000;
+		}
+		&__title{
+			font-weight: 700;
+			color: #000;
+			
+			line-height: 1.2;
+			font-size: 4.8rem;
+		}
+		&__date{
+			color: #717171;
+			font-size: 1.7rem;
+		}
+		&__content{
+			color: #555555;
+			line-height: 1.7;
+			padding: 10rem 0;
+			white-space: pre-wrap;
+			p{
+				font-size: 1.9rem;
+			}
+		}
+		&__files{
+			border: 1px solid #c6c6c6;
+			border-radius: 0.5rem;
+			padding: 2rem 3rem;
+			&__list{
+				+ * {
+					margin-top: 0.5rem;
+				}
+				a{
+					display: inline-flex;
+					align-items: center;
+					gap: 0 .5rem;
+					max-width: 100%;
+					span{
+						color: #555;
+					}
+				}
+			}
+		}
+	}
+}
