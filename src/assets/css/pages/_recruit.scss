@@ -400,6 +400,9 @@ $img: '../images/recruit';
 }
 
 .personnel{
+	.intro--banner_bg{
+		background-image: url('#{$img}/bg-recruit02.png');
+	}
 	.tp-wrap{
 		margin-bottom: 8rem;
 	}
@@ -484,6 +487,14 @@ $img: '../images/recruit';
 	.person-step-wrap{
 		padding: 8rem 0;
 		background: #0a529d;
+		.recruit-step{
+			li{
+				&:before{
+					background-image: url('#{$img}/step-arrow-white.png');
+				}
+			}
+		}
+		
 		.person-ti{
 			color:#fff;
 		}
