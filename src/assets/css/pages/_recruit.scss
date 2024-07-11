@@ -1,7 +1,6 @@
 @import '../utils/var';
 @import '../utils/function';
 
-<<<<<<< Updated upstream
 $img: '../images/recruit';
 
 .recruit{
@@ -9,9 +8,6 @@ $img: '../images/recruit';
 		background-image: url('#{$img}/bg-recruit.png');
 	}
 	
-=======
-.recruit{
->>>>>>> Stashed changes
 	&--gall{
 		&__inner{
 			position: relative;
@@ -22,7 +18,6 @@ $img: '../images/recruit';
 			max-height: 24.7rem;
 		}
 		&__progress{
-<<<<<<< Updated upstream
 			
 			span{
 				display: inline-block;
@@ -34,29 +29,13 @@ $img: '../images/recruit';
 				border-radius:0.4rem;
 				font-size: 1.5rem;
 				&.ing{
-=======
-			margin-bottom: 2.4rem;
-			span{
-				display: inline-block;
-				padding: 0.9rem 2.3rem;
-				color:#717171;
-				border: 1px solid #c6c6c6;
-				background: #f1f1f1;
-				border-radius:1.6rem;
-				font-size: 1.5rem;
-				&.ing{
-					border: 1px solid #007ab4;
->>>>>>> Stashed changes
 					color:#007ab4;
 					background: #cce4f0;
 				}
 			}
 		}
 		&__ti{
-<<<<<<< Updated upstream
 			margin-top: 2.4rem;
-=======
->>>>>>> Stashed changes
 			font-weight: bold;
 			font-size: 2.5rem;
 			color: #2d2d2d;
@@ -70,15 +49,11 @@ $img: '../images/recruit';
 		&__data{
 			position: absolute;
 			left: 3.2rem;
-<<<<<<< Updated upstream
 			right: 3.2rem;
 			border-top: 1px solid #e4e4e4;
 			bottom: 3.2rem;
 			color:#555555;
 			padding-top: 2rem;
-=======
-			bottom: 3.2rem;
->>>>>>> Stashed changes
 		}
 	}
 }
@@ -90,16 +65,9 @@ $img: '../images/recruit';
 			align-items: center;
 			flex-direction: column;
 			justify-content: space-between;
-<<<<<<< Updated upstream
 			height: 18rem;
 			padding: 0 0 7.5rem;
 			text-align: center;
-=======
-			height: 30rem;
-			padding: 6.5rem 0 6rem;
-			text-align: center;
-			border-bottom: 2px solid #000;
->>>>>>> Stashed changes
 		}
 		&__title{
 			font-weight: 700;
@@ -115,11 +83,6 @@ $img: '../images/recruit';
 		&__content{
 			color: #555555;
 			line-height: 1.7;
-<<<<<<< Updated upstream
-=======
-			padding: 10rem 0;
-			white-space: pre-wrap;
->>>>>>> Stashed changes
 			p{
 				font-size: 1.9rem;
 			}
@@ -143,7 +106,6 @@ $img: '../images/recruit';
 				}
 			}
 		}
-<<<<<<< Updated upstream
 		&__navigation{
 			margin-top: 10rem;
 			@include responsive(xl){
@@ -434,7 +396,5 @@ $img: '../images/recruit';
 	.community__frm--group{
 		margin-top: 0;
 		flex:1;
-=======
->>>>>>> Stashed changes
 	}
 }
