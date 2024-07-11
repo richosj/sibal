@@ -104,7 +104,8 @@ function minifyCssReset() {
 
 
 const separateFiles = [
-  'src/assets/js/main.js'  
+  'src/assets/js/main.js',
+  'src/assets/js/fileUpload.js'
 ];
 // JavaScript task
 function scripts() {
@@ -142,8 +143,6 @@ function createSeparateTasks() {
     return taskName;
   });
 }
-
-
 // Vendor JavaScript task
 function vendors() {
   return gulp.src(paths.vendorJs)
