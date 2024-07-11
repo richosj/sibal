@@ -87,39 +87,49 @@
                 width: 250px;
                 height: 54px;
                 padding: 0 30px;
-                transition: all 0.15s;
                 .arw{
                     color: #a4a4a4;
                     font-size: 3rem;
                     transform: rotate(0deg);
-                    transition: all 0.15s;
+                    transition: all 0.35s;
                 }
                 &[aria-expanded="true"]{
-                    background-color: #fff;
-                    color: #000;
-                    border-radius: 0;
                     .arw{
-                        color: #000;
                         transform: rotate(180deg);
+                    }
+                    + .dropdown-content{
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0rem);
                     }
                 }
             }
             .dropdown-content{
                 position: absolute;
                 left: 0;
+                bottom: 100%;
                 width: 100%;
-                display: none;
+                //display: none;
                 background-color: #fff;
-                border: 1px solid #eee;
-                padding: 2rem;
+                border: .2rem solid #000;
+                padding: 1rem 0;
+                border-radius: 1rem;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(3.5rem);
+                transition: all 0.5s ease-in-out;
                 a{
-                    padding: 0.5rem 0.7rem;
+                    padding: 1rem 0 1rem 2.4rem;
                     display: block;
                     width: 100%;
                     color: #000;
-                    font-size: 1.25rem;
+                    font-size: 1.6rem;
                     +a{
                         border-top: 1px solid rgba(255,255,255,0.4);
+                    }
+                    &:hover,
+                    &:focus{
+                        color: #0a529d;
                     }
                 }
             }
