@@ -40,8 +40,11 @@ body{
 .intro--banner{
     position: relative;
     margin-bottom: 15rem;
-    @include responsive(xl){
-        display: none;
+    @include responsive(lg){
+        margin-bottom: 10rem;
+    }
+    @include responsive(md){
+        margin-bottom: 7rem;
     }
     &_point{
         //margin-top: 15rem;
@@ -59,6 +62,9 @@ body{
         width: 100%;
         z-index: 2;
         height: 24rem;
+        @include responsive(lg){
+            height: 12rem;
+        }
         h2,p{
             transition: color 0.25s;
         }
@@ -72,13 +78,15 @@ body{
             color: #000;
             font-weight: 700;
             font-size: 4.8rem;
+            line-height: 1.5;
         }
         @include responsive(lg){
             h2{
-                font-size: clamp(1.6rem, 2.4vw, 2rem);
+                font-size: clamp(1.4rem, 2.4vw, 2rem);
+                padding-bottom: 1.5rem;
             }
             p{
-                font-size: clamp(2rem, 4.8vw, 4rem);
+                font-size: clamp(1.5rem, 3.8vw, 4rem);
             }
         }
     }
@@ -96,6 +104,9 @@ body{
         max-width: var(--xl);
         background-repeat: no-repeat;
         background-position: 50% 0;
+        @include responsive(lg){
+            height: 25rem;
+        }
         &.__business{
             background-image: url("../images/business/bg.png");
         }

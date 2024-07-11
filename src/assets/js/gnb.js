@@ -78,7 +78,7 @@ const handleDropdownButtonClick = (button, dropdownMenu, menuItems) => {
   const toggleDropdown = () => {
     isOpen = !isOpen;
     button.setAttribute("aria-expanded", isOpen);
-    dropdownMenu.style.display = isOpen ? "block" : "none";
+    //dropdownMenu.style.display = isOpen ? "block" : "none";
   };
 
   button.addEventListener("click", (event) => {
@@ -258,8 +258,22 @@ function updateMobileMenu(){
   introBgElement.classList.add('_'+pageConentTitle)
 })()
 
+const breadCrumbDrop = () => {
+  const breadCrumbButton = document.querySelector('.breadcrumb--menu_drop .trigger');
+  const breadCrumbMenu = document.querySelector('.first-list');
+  
+  
+  if(breadCrumbMenu == null) return;
+
+  breadCrumbButton.addEventListener('click', () => {
+    breadCrumbButton.classList.toggle('_open');
+  })
+
+}
+
 const init = () => {
   
+  breadCrumbDrop()
   headers();
   updateMobileMenu()
 

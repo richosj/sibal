@@ -40,7 +40,7 @@ body:has(header.up){
         }
     }
     .fx{
-        margin-right: 2.5rem;
+        //margin-right: 2.5rem;
         a{
             display: block;
             width: 2.4rem;
@@ -54,6 +54,19 @@ body:has(header.up){
     &--menu_drop{
         position: relative;
         height: 100%;
+        padding-right: 3.5rem;
+        padding-left: 2.5rem;
+        &::after{
+            content:"";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: .1rem;
+            height: 1.8rem;
+            background-color: #d8d8d8;
+            transform: translateY(-50%);
+        }
         @include responsive(lg) {
             width: 50%;
         }
@@ -73,6 +86,7 @@ body:has(header.up){
                 right: 0;
                 top: 50%;
                 transform: translateY(-50%) rotate(0deg);
+                transition: all 0.15s;
                 background: url("../images/common/breadcrumb-arw.png");
                 width: 8px;height: 5px;
             }
@@ -83,18 +97,56 @@ body:has(header.up){
                     font-size: 1.2rem;
                 }
             }
+            &._open{
+                &::after{
+                    transform: translateY(-50%) rotate(180deg);
+                }
+                +.first-list{
+                    opacity: 1;
+                    visibility: visible;
+                    li{
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                        transition: all 0.5s ease-in-out;
+                        @for $i from 1 through 6 {
+                            &:nth-child(#{$i}){
+                                transition-delay: $i * 0.15s;
+                            }
+                        }
+                    }
+                }
+            }
         }
         .first-list{
-            display: none;
+            //display: none;
             position: absolute;
             left: 0;
-            top: 100%;
+            top: calc(100% + .4rem);
             right: 0;
+            border-radius: 1rem;
+            background-color: #0a529d;
+            padding: 1rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s;
+            li{
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(2.5rem);
+                
+                > a{
+                    display: block;
+                    color: #fff;
+                    font-size: 1.6rem;
+                    padding: 1rem 0 1rem 2.5rem;
+                }
+            }
         }
         
     }
     &--sub_list{
-        margin-left: 3.5rem;
+        //margin-left: 3.5rem;
         padding-left: 5rem;
         border-left: 0;
         height: 100%;
